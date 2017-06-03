@@ -26,9 +26,10 @@
 					$fname = (isset($_POST['fname'])    ? $_POST['fname']   : '');
 					$lname = (isset($_POST['lname'])    ? $_POST['lname']   : '');
 
-					$sql= "SELECT id, fname, lname
-					FROM lecture1
-					WHERE fname LIKE '$fname' AND lname LIKE '$lname' LIMIT 1";
+					$sql= "SELECT clients.clientID, clients.fname, clients.lname, membership.category, membership.description
+					FROM clients
+					JOIN membership on clients.clientID = membership.clientID
+					ORDER BY clients.lname ASC";
 					$result = mysqli_query($conn, $sql);
 
 					if (mysqli_num_rows($result) > 0) {
