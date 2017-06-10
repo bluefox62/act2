@@ -42,7 +42,13 @@
 
 					?>
 
-				<div data-role="footer" data-theme="b">
+					<div
+	  class="fb-like"
+	  data-share="true"
+	  data-width="450"
+	  data-show-faces="true">
+	</div>
+	<div data-role="footer" data-theme="b">
 	  <h4>Brett Riegert &copy; 2017</h4>
 	</div>
 	</body>
