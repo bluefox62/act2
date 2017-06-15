@@ -9,24 +9,6 @@
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <script src="javascript/storage.js"></script>
 <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '341268542960305',
-      xfbml      : true,
-      version    : 'v2.9'
-    });
-    FB.AppEvents.logPageView();
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
 	var Notification = window.Notification || window.mozNotification || window.webkitNotification;
 
 	Notification.requestPermission(function (permission) {
@@ -56,6 +38,7 @@
 </script>
 
 <button type="button" onclick="show()">Notify me!</button>
+
 </head>
 	<body>
 		<div id="page" data-role="page" data-theme="b" >
